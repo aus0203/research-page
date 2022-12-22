@@ -33,7 +33,7 @@ onBeforeUnmount(() => [
     <template #logo>
       <img
         class="y-logo"
-        src="@/assets/image/a-logo-yuki-product.png"
+        src="../assets/image/a-logo-yuki-product.png"
         alt="logo"
       />
     </template>
@@ -87,7 +87,7 @@ onBeforeUnmount(() => [
       <template #logo>
         <img
           class="y-logo"
-          src="@/assets/image/a-logo-yuki-product.png"
+          src="../assets/image/a-logo-yuki-product.png"
           alt="logo"
         />
       </template>
