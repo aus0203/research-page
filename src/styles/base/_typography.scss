@@ -1,0 +1,127 @@
+@use "sass:map";
+@use "fonts";
+
+// Define the classes for the correct fonts and types
+
+$font-styles: (
+	"headline-1": (
+		"font-size": 24px,
+		"font-weight": fonts.$font-weight-bold,
+		"line-height": 32px
+	),
+	"headline-2": (
+		"font-size": 20px,
+		"font-weight": fonts.$font-weight-bold,
+		"line-height": 28px
+	),
+	"headline-3": (
+		"font-size": 16px,
+		"font-weight": fonts.$font-weight-bold,
+		"line-height": 24px
+	),
+	"subtitle": (
+		"font-size": 14px,
+		"font-weight": fonts.$font-weight-bold,
+		"line-height": 20px
+	),
+	"paragraph": (
+		"font-size": 16px,
+		"font-weight": fonts.$font-weight-normal,
+		"line-height": 24px
+	),
+	"body": (
+		"font-size": 14px,
+		"font-weight": fonts.$font-weight-normal,
+		"line-height": 20px
+	),
+	"caption": (
+		"font-size": 12px,
+		"font-weight": fonts.$font-weight-normal,
+		"line-height": 16px
+	),
+	"caption-emphasized": (
+		"font-size": 12px,
+		"font-weight": fonts.$font-weight-bold,
+		"line-height": 16px,
+		"letter-spacing": 0.3px
+	),
+	"overline": (
+		"font-size": 12px,
+		"font-weight": fonts.$font-weight-normal,
+		"line-height": 16px,
+		"letter-spacing": 1px,
+		"text-transform": uppercase
+	),
+	"button": (
+		"font-size": 14px,
+		"font-weight": fonts.$font-weight-semibold,
+		"line-height": 20px,
+		"letter-spacing": 0.3px
+	)
+);
+
+@mixin font($name) {
+	font-size: map.get(map.get($font-styles, $name), "font-size");
+	font-weight: map.get(map.get($font-styles, $name), "font-weight");
+	line-height: map.get(map.get($font-styles, $name), "line-height");
+	letter-spacing: map.get(map.get($font-styles, $name), "letter-spacing");
+	text-transform: map.get(map.get($font-styles, $name), "text-transform");
+}
+
+.headline-1 {
+	@include font("headline-1");
+}
+
+.headline-2 {
+	@include font("headline-2");
+}
+
+.headline-3 {
+	@include font("headline-3");
+}
+
+.subtitle {
+	@include font("subtitle");
+}
+
+.paragraph {
+	@include font("paragraph");
+}
+
+.body {
+	@include font("body");
+}
+
+.caption {
+	@include font("caption");
+}
+
+.caption-emphasized {
+	@include font("caption-emphasized");
+}
+
+.overline {
+	@include font("overline");
+}
+
+.button {
+	@include font("button");
+}
+
+h1 {
+	@include font("headline-1");
+	margin-bottom: 12px;
+	color: var(--text-color--default);
+}
+
+h2 {
+	@include font("headline-2");
+	margin-bottom: 12px;
+	color: var(--text-color--default);
+}
+
+h3 {
+	@include font("headline-3");
+	margin-bottom: 12px;
+	color: var(--text-color--default);
+}

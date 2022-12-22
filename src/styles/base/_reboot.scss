@@ -1,0 +1,58 @@
+@use "fonts";
+@use "colors";
+
+// Set the base values after the CSS reset
+
+// Body
+@-moz-document url-prefix("") {
+	html,
+	body {
+		height: 100%;
+	}
+}
+
+body {
+	font-family: fonts.$font-family;
+	font-size: fonts.$font-size;
+	font-weight: fonts.$font-weight-normal;
+	line-height: 18px;
+	color: var(--text-color--default);
+	text-align: left;
+	background-color: colors.$background-color;
+}
+
+a {
+	color: colors.$link-color;
+	text-decoration: none;
+}
+
+[v-cloak] {
+	display: none;
+}
+
+iframe {
+	height: 100%;
+	width: 100%;
+	border: none;
+}
+
+input,
+textarea {
+	font-family: fonts.$font-family;
+}
+
+hr {
+	border-width: 0;
+	height: 1px;
+	border-top: 1px solid var(--hr-color);
+	margin: 20px 0 40px;
+}
+
+:focus {
+	outline: 1px dotted var(--icon-color--disabled);
+}
+
+::selection {
+	color: colors.$white;
+	background: var(--text-color--link);
+}

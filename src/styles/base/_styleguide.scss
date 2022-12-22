@@ -1,0 +1,15 @@
+@use "./colors";
+@use "./typography";
+
+/**
+ * DO NOT USE THESE STYLES OUTSIDE THE LAB!
+ */
+
+code {
+	display: inline-block;
+	background: colors.$color-primary-900;
+	color: colors.$color-primary-100;
+	padding: 0.1em 0.5em;
+	border-radius: 2px;
+	font-size: 0.9em;
+}

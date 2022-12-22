@@ -1,0 +1,19 @@
+/**
+ * responsive breakpoints
+ * Using include-media https://eduardoboucas.github.io/include-media/#documentation
+ * 
+ * Usage:
+ * - Add '@use "../base/responsive";' to your scss file (adapt the path if necessary).
+ * - Add '@use "~include-media/dist/include-media" as *;' to your scss file.
+ * - Add '$breakpoints: responsive.$breakpoints;' to your scss file to set the breakpoints.
+ *
+ * For examples, see https://dev.azure.com/theyukicompany/_git/yuki/?path=web/src/views/domain/lab/css/media-queries.vue
+ */
+
+// Breakpoint variable override
+$breakpoints: (
+	phone: 768px,
+	tablet: 1080px,
+	desktop: 1920px,
+	desktopLarge: 2560px
+) !default;

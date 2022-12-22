@@ -1,0 +1,103 @@
+{
+  "heroline": {
+    "headline": "Help shape the future of Yuki",
+    "subtitle": "Join the Yuki user research group",
+    "description": "We’d love to know your thoughts, so we can keep making Yuki that fit your needs. You’ll get to influence things millions of people use every day, from email and productivity apps to tools for developers and educators"
+  },
+  "action": "Sign up",
+  "stepSectionTitle": "How to participate?",
+  "steps": [
+    {
+      "id": 0,
+      "order": "Step 1",
+      "title": "Sign up",
+      "description": "Tell us a little bit about yourself by filling a from. It’ll help us determine if any of the upcoming UX research studies would be a good match.",
+      "src": "src/assets/image/y-image-sign-up.png"
+    },
+    {
+      "id": 1,
+      "order": "Step 2",
+      "title": "Get contacted and join the research",
+      "description": "If a study is a good fit for you, you’ll get a follow-up questionnaire and details about what the study involves, including next steps and location..",
+      "src": "src/assets/image/y-image-session.png"
+    },
+    {
+      "id": 2,
+      "order": "Step 3",
+      "title": "Accept our gift",
+      "description": "After completing the study, most participants will get a giftcard to thank them for their time.",
+      "src": "src/assets/image/y-image-gift.png"
+    }
+  ],
+  "questionSectionTitle":"Research Q&A",
+  "sectionQuestions": [
+    {
+      "id": 1,
+      "category": "Signing up",
+      "questions": [
+        {
+          "id": 1,
+          "title": "What kinds of participants are you looking for?",
+          "answer": "All kinds. You don’t need to be a financial expert or technology enthusiast to sign up. Anyone who has ever used the Yuki in any way can join the programme."
+        },
+        {
+          "id": 2,
+          "title": "How soon will you contact me?",
+          "answer": "We want to make sure that the studies that you participate in are a good fit for you. That’s why we can’t guarantee that everyone who applies will end up participating. If we do contact you, it may not be straight away because we will be waiting for a study that’s a good match. We may contact you at any point as long as you remain registered."
+        },
+        {
+          "id": 3,
+          "title": "If I sign up, will you send me spam or sell my data to other companies?",
+          "answer": "No. All the information that you provide is kept confidential in accordance with the Yuki Privacy Policy. We only use it to help us find suitable participants for our research studies. We would only contact you if we wanted to invite you to participate in a study or needed to clarify some information that you provided."
+        },
+        {
+          "id": 4,
+          "title": "I signed up, but I’ve decided that I don’t want to participate. How do I opt out?",
+          "answer": "You can opt out at any time by completing the opt-out form."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Participating in a study",
+      "questions": [
+        {
+          "id": 1,
+          "title": "What exactly will i be doing in these studies?",
+          "answer": "Yuki runs a variety of study types. You may be invited to participate in any of the following studies:\n\nRemote usability study\n\nIn these studies, we’ll gather your feedback via a screen-sharing session with a researcher where you may be asked questions or provide feedback about a process or design. You can be almost anywhere in the world, but you’ll need to have a high-speed Internet connection.\n\nGiving feedback at a Yuki office\n\nThis works best for people who live close to one of our offices. Typically, you’ll meet one-on-one with a UX Researcher who’ll ask you some questions about your experiences with our products or technology in general.You can reply directly to your invitation with any questions.\n\nSurveys\n\nFor these studies, we’ll simply send you a survey form to fill in. Please note that we don’t typically offer a gift for participating in a survey."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Thank you gift",
+      "questions": [
+        {
+          "id": 1,
+          "title": "What is a thank you gift?",
+          "answer": "This is Yuki's way of providing a gift as a way to say thank you to people who participate in our research studies."
+        },
+        {
+          "id": 2,
+          "title": "What kinds of participants are you looking for?",
+          "answer": "All kinds. You don’t need to be a financial expert or technology enthusiast to sign up. Anyone who has ever used the Yuki in any way can join the programme."
+        }
+      ]
+    }
+  ],
+  "promotion": {
+    "title": "When will I recieve a gift?",
+    "description": "If your session is eligible for a thank you gift, you should receive it three to five working days after completing your session. Please note that not all study participants will receive a thank you gift."
+  },
+  "languages": [
+    { "id": 1, "option": "English" },
+    { "id": 2, "option": "Nederlands" },
+    { "id": 3, "option": "Vlaams" },
+    { "id": 4, "option": "Français" }
+  ],
+  "footers": [
+    { "id": 1, "link": "Go back to Yuki", "src": "https://www.google.com/" },
+    { "id": 2, "link": "Privacy", "src": "https://www.google.com/" },
+    { "id": 3, "link": "Term and condition", "src": "https://www.google.com/" }
+  ]
+}

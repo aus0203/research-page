@@ -1,0 +1,91 @@
+/**
+ * display: flex utilities
+ * TODO: add u- prefix
+ **/
+
+// --- Parent properties:
+[class].flex {
+	display: flex;
+}
+[class].flex-c {
+	flex-direction: column;
+}
+[class].flex-r {
+	flex-direction: row;
+}
+[class].flex-w {
+	flex-wrap: wrap;
+}
+[class].flex-nw {
+	flex-wrap: nowrap;
+}
+[class].flex-wr {
+	flex-wrap: wrap-reverse;
+}
+[class].flex-cr {
+	flex-direction: column-reverse;
+}
+[class].flex-rr {
+	flex-direction: row-reverse;
+}
+
+// justify-content
+[class].jc-s {
+	justify-content: flex-start;
+}
+[class].jc-e {
+	justify-content: flex-end;
+}
+[class].jc-l {
+	justify-content: left;
+}
+[class].jc-c {
+	justify-content: center;
+}
+[class].jc-b {
+	justify-content: baseline;
+}
+[class].jc-ss {
+	justify-content: space-around;
+}
+[class].jc-se {
+	justify-content: space-evenly;
+}
+[class].jc-sb {
+	justify-content: space-between;
+}
+
+// align-items
+[class].ai-s {
+	align-items: flex-start;
+}
+[class].ai-e {
+	align-items: flex-end;
+}
+[class].ai-c {
+	align-items: center;
+}
+[class].ai-b {
+	align-items: baseline;
+}
+[class].ai-st {
+	align-items: stretch;
+}
+
+// align-self
+[class].as-s {
+	align-self: flex-start;
+}
+[class].as-e {
+	align-self: flex-end;
+}
+[class].as-c {
+	align-self: center;
+}
+
+// --- Children properties:
+@for $i from 1 through 12 {
+	.flex-#{$i} {
+		flex-grow: $i;
+	}
+}

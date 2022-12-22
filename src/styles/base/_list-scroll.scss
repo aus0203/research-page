@@ -1,0 +1,13 @@
+/**
+ * Provides a hidable scroll, for example on large menu lists
+ **/
+@mixin list-scroll {
+	overflow-y: hidden;
+	@media (hover: none) {
+		overflow-y: auto;
+	}
+
+	&:hover {
+		overflow-y: auto;
+	}
+}

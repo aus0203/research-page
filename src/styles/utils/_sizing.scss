@@ -1,0 +1,30 @@
+@use "sass:math";
+
+/**
+ * Utility to add a percentage width or height to an element
+ **/
+
+// Sizing units that will be iterated
+$sizePercentages: (0, 33, 50, 90, 100);
+
+@each $size in $sizePercentages {
+	// u-h0, u-h100, etc...
+	.u-h#{$size}[class] {
+		height: math.percentage(math.div($size, 100));
+	}
+
+	// u-w0, u-w100, etc...
+	.u-w#{$size}[class] {
+		width: math.percentage(math.div($size, 100));
+	}
+}
+
+$squareSizes: (12);
+
+@each $size in $squareSizes {
+	// u-square12, etc...
+	.u-square#{$size} {
+		height: #{$size}px;
+		width: #{$size}px;
+	}
+}

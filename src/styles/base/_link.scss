@@ -1,0 +1,20 @@
+@use "animations";
+
+// Link colors
+
+.link,
+%link {
+	color: var(--text-color--link);
+	position: relative;
+	@include animations.transition();
+
+	background: linear-gradient(to bottom, var(--text-color--link) 0%, var(--text-color--link) 98%);
+	background-size: 0 1px;
+	background-repeat: no-repeat;
+	background-position: center 96%;
+
+	&:hover {
+		cursor: pointer;
+		background-size: 100% 1px;
+	}
+}

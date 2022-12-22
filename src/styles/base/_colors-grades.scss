@@ -1,0 +1,165 @@
+// Quality Monitor Scale
+$color-quality-10: #92c76d;
+$color-quality-9: #c7d66f;
+$color-quality-8: #ffe249;
+$color-quality-6: #ffcc49;
+$color-quality-4: #fe8745;
+$color-quality-2: #e05f0e;
+$color-quality-gray: #cccccc;
+
+// Bad grade percentage
+$color-percentage-100: #c61111;
+$color-percentage-80: #d92626;
+$color-percentage-60: #e05f0e;
+$color-percentage-40: #fe8745;
+$color-percentage-20: #8cb822;
+
+// Satisfaction grade
+$color-satisfaction-9-10: #8cb822;
+$color-satisfaction-8: #c7d66f;
+$color-satisfaction-6-7: #ffcc49;
+$color-satisfaction-3-5: #f37221;
+$color-satisfaction-1-2: #e93b19;
+
+// Difference
+$color-difference-positive: #6e9c15;
+$color-difference-negative: #c61111;
+
+// Background colors
+// -----------------
+.bg-color--quality-10 {
+	background-color: $color-quality-10;
+}
+.bg-color--quality-9 {
+	background-color: $color-quality-9;
+}
+.bg-color--quality-8 {
+	background-color: $color-quality-8;
+}
+.bg-color--quality-6 {
+	background-color: $color-quality-6;
+}
+.bg-color--quality-4 {
+	background-color: $color-quality-4;
+}
+.bg-color--quality-2 {
+	background-color: $color-quality-2;
+}
+.bg-color--quality-gray {
+	background-color: $color-quality-gray;
+}
+
+.text-color--quality-10 {
+	color: $color-quality-10;
+}
+.text-color--quality-9 {
+	color: $color-quality-9;
+}
+.text-color--quality-8 {
+	color: $color-quality-8;
+}
+.text-color--quality-6 {
+	color: $color-quality-6;
+}
+.text-color--quality-4 {
+	color: $color-quality-4;
+}
+.text-color--quality-2 {
+	color: $color-quality-2;
+}
+.text-color--quality-gray {
+	color: $color-quality-gray;
+}
+
+.icon-color--quality-10 {
+	color: $color-quality-10;
+}
+.icon-color--quality-9 {
+	color: $color-quality-9;
+}
+.icon-color--quality-8 {
+	color: $color-quality-8;
+}
+.icon-color--quality-6 {
+	color: $color-quality-6;
+}
+.icon-color--quality-4 {
+	color: $color-quality-4;
+}
+.icon-color--quality-2 {
+	color: $color-quality-2;
+}
+.icon-color--quality-gray {
+	color: $color-quality-gray;
+}
+
+.bg-color--percentage-100 {
+	background-color: $color-percentage-100;
+}
+.bg-color--percentage-80 {
+	background-color: $color-percentage-80;
+}
+.bg-color--percentage-60 {
+	background-color: $color-percentage-60;
+}
+.bg-color--percentage-40 {
+	background-color: $color-percentage-40;
+}
+.bg-color--percentage-20 {
+	background-color: $color-percentage-20;
+}
+
+.text-color--percentage-100 {
+	color: $color-percentage-100 !important;
+}
+.text-color--percentage-80 {
+	color: $color-percentage-80 !important;
+}
+.text-color--percentage-60 {
+	color: $color-percentage-60 !important;
+}
+.text-color--percentage-40 {
+	color: $color-percentage-40 !important;
+}
+.text-color--percentage-20 {
+	color: $color-percentage-20 !important;
+}
+
+.bg-color--satisfaction-9-10 {
+	background-color: $color-satisfaction-9-10;
+}
+.bg-color--satisfaction-8 {
+	background-color: $color-satisfaction-8;
+}
+.bg-color--satisfaction-6-7 {
+	background-color: $color-satisfaction-6-7;
+}
+.bg-color--satisfaction-3-5 {
+	background-color: $color-satisfaction-3-5;
+}
+.bg-color--satisfaction-1-2 {
+	background-color: $color-satisfaction-1-2;
+}
+
+.text-color--satisfaction-9-10 {
+	color: $color-satisfaction-9-10 !important;
+}
+.text-color--satisfaction-8 {
+	color: $color-satisfaction-8 !important;
+}
+.text-color--satisfaction-6-7 {
+	color: $color-satisfaction-6-7 !important;
+}
+.text-color--satisfaction-3-5 {
+	color: $color-satisfaction-3-5 !important;
+}
+.text-color--satisfaction-1-2 {
+	color: $color-satisfaction-1-2 !important;
+}
+
+.text-color--difference-positive {
+	color: $color-difference-positive !important;
+}
+.text-color--difference-negative {
+	color: $color-difference-negative !important;
+}

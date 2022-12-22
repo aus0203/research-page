@@ -1,0 +1,75 @@
+/**
+ * Margin and Padding utilities
+ * Use "u-m" prefix for margins, "u-p" prefix for padding
+**/
+
+// Spacing units that will be iterated (you can add more if needed)
+$spacingUnits: (0, 4, 6, 8, 10, 12, 16, 18, 20, 24, 32, 48);
+
+// Css sides mapping
+$sides: (
+	top: "t",
+	right: "r",
+	bottom: "b",
+	left: "l"
+);
+
+// Iteration trough spacing units
+@each $spacing in $spacingUnits {
+	// u-p0, u-p8, etc...
+	.u-p#{$spacing}[class] {
+		padding: #{$spacing}px;
+	}
+
+	// u-m0, u-m8, etc...
+	.u-m#{$spacing}[class] {
+		margin: #{$spacing}px;
+	}
+
+	@each $side, $sideShort in $sides {
+		// u-pt0, u-pl0 [...] u-pl0, u-pl8, etc...
+		.u-p#{$sideShort}#{$spacing}[class] {
+			padding-#{$side}: #{$spacing}px;
+		}
+
+		// u-mt0, u-ml0 [...] u-ml0, u-ml8, etc...
+		.u-m#{$sideShort}#{$spacing}[class] {
+			margin-#{$side}: #{$spacing}px;
+		}
+	}
+
+	// Vertical spacing
+	// u-py0, u-py2,... u-py32
+	.u-py#{$spacing}[class] {
+		padding-top: #{$spacing}px;
+		padding-bottom: #{$spacing}px;
+	}
+
+	// u-my0, u-my2,... u-my32
+	.u-my#{$spacing}[class] {
+		margin-top: #{$spacing}px;
+		margin-bottom: #{$spacing}px;
+	}
+
+	// Horizontal Padding
+	// u-px0, u-px2,... u-px32
+	.u-px#{$spacing}[class] {
+		padding-left: #{$spacing}px;
+		padding-right: #{$spacing}px;
+	}
+
+	// u-mx0, u-mx2,... u-mx32
+	.u-mx#{$spacing}[class] {
+		margin-left: #{$spacing}px;
+		margin-right: #{$spacing}px;
+	}
+}
+
+@each $side, $sideShort in $sides {
+	.u-m#{$sideShort}a[class] {
+		margin-#{$side}: auto;
+	}
+}
+.u-m0a {
+	margin: 0 auto;
+}

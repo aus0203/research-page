@@ -1,0 +1,16 @@
+$font-family: "Nunito Sans";
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-size: 14px;
+$font-line-height: 20px;
+
+$font-active-weight: $font-weight-semibold;
+$font-active-letter-spacing: 0.3px;
+
+.semibold[class] {
+	font-weight: $font-weight-semibold;
+}
+.bold[class] {
+	font-weight: $font-weight-bold;
+}

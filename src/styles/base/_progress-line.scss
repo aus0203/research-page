@@ -1,0 +1,80 @@
+/**
+ * Used for the the global navigation iframe , not for the specific y-iframe component
+ **/
+@use "colors";
+
+.iframe-loading {
+	position: relative;
+	height: 100%;
+}
+
+.progress-line,
+.progress-line::before {
+	height: 7px;
+	width: 100%;
+	margin: 0;
+}
+.progress-line {
+	position: absolute;
+	background-color: colors.$color-secondary-600;
+	display: flex;
+	overflow: hidden;
+
+	&::before {
+		background: url("~@/assets/loadingbar.jpg");
+		background-color: colors.$color-secondary-900;
+		background-position: center 0;
+		background-size: contain;
+		content: "";
+		/* stylelint-disable-next-line property-no-vendor-prefix */
+		-webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+		animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+	}
+
+	&__full-screen {
+		top: 52px;
+	}
+}
+
+.progress-line-enter-active,
+.progress-line-leave-active {
+	transition: 0.15s;
+}
+.progress-line-enter,
+.progress-line-leave-to {
+	height: 0;
+}
+
+.progress-line-leave-active {
+	transition: 0.5s;
+}
+
+/* stylelint-disable-next-line at-rule-no-vendor-prefix */
+@-webkit-keyframes running-progress {
+	0% {
+		margin-left: 0;
+		margin-right: 100%;
+	}
+	50% {
+		margin-left: 25%;
+		margin-right: 0%;
+	}
+	100% {
+		margin-left: 100%;
+		margin-right: 0;
+	}
+}
+@keyframes running-progress {
+	0% {
+		margin-left: 0;
+		margin-right: 100%;
+	}
+	50% {
+		margin-left: 25%;
+		margin-right: 0%;
+	}
+	100% {
+		margin-left: 100%;
+		margin-right: 0;
+	}
+}

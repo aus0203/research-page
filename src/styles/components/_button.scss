@@ -1,0 +1,372 @@
+@use "sass:map";
+@use "../base/shapes";
+@use "../base/colors";
+@use "../base/fonts";
+@use "../base/typography";
+@use "../base/animations";
+$--button-border-width: shapes.$shape-border-width;
+$--button-border-radius: shapes.$shape-border-radius;
+$--button-border-color: colors.$color-primary;
+
+:root,
+[data-theme="light"] {
+	--button--primary-background-color: #{colors.$color-primary};
+	--button--primary-background-color--hover: #{colors.$color-primary-900};
+	--button--primary-background-color--disabled: #{colors.$color-primary-100};
+	--button--primary-icon-background-color: #{colors.$color-secondary};
+	--button--primary-icon-background-color--disabled: #{colors.$icon-color-disabled-on--light};
+
+	// Primary text color
+	--button--primary-text-color: #{colors.$text-color-emphasized-on--dark};
+	--button--primary-text-color--hover: #{colors.$text-color-emphasized-on--dark};
+	--button--primary-text-color--disabled: #{colors.$text-color-disabled-on--light};
+
+	// Background color
+	--button--default-background-color: #{colors.$white};
+	--button--default-background-color--hover: #{colors.$color-primary-50};
+	--button--default-background-color--disabled: #{colors.$white};
+
+	// Default text color
+	--button--default-text-color: #{colors.$text-color-default-on--light};
+	--button--default-text-color--hover: #{colors.$text-color-default-on--light};
+	--button--default-text-color--disabled: #{colors.$text-color-disabled-on--light};
+
+	// Default border color
+	--button--default-border-color: #{colors.$color-primary};
+	--button--default-border-color--hover: #{colors.$color-primary};
+	--button--default-border-color--disabled: #{colors.$color-primary-200};
+
+	// Quiet text color
+	--button--quiet-text-color: #{colors.$text-color-default-on--light};
+	--button--quiet-text-color--hover: #{colors.$text-color-emphasized-on--light};
+	--button--quiet-text-color--disabled: #{colors.$text-color-disabled-on--light};
+
+	// Quiet background color
+	--button--quiet-background-color: transparent;
+	--button--quiet-background-color--hover: #{colors.$color-primary-100};
+	--button--quiet-background-color--disabled: transparent;
+
+	// Icon text color
+	--button--icon-text-color: #{colors.$icon-color-default-on--light};
+	--button--icon-text-color--hover: #{colors.$icon-color-emphasized-on--light};
+	--button--icon-background-color--hover: #{colors.$color-primary-100};
+	--button--icon-text-color--disabled: #{colors.$icon-color-disabled-on--light};
+
+	// Icon background color
+	--button--icon-background-color--active: #{colors.$color-tertiary-50};
+	--button--icon-background-color--focus: #{colors.$color-primary-200};
+	--button--icon-background-color: #{colors.$icon-color-emphasized-on--light};
+	--button--icon-background-color--disabled: #{colors.$icon-color-disabled-on--light};
+}
+
+[data-theme="dark"] {
+	--button--primary-background-color: #{colors.$color-primary};
+	--button--primary-background-color--hover: #{colors.$color-primary-600};
+	--button--primary-background-color--disabled: #{colors.$color-primary-800};
+	--button--primary-icon-background-color: #{colors.$color-secondary};
+	--button--primary-icon-background-color--disabled: #{colors.$text-color-disabled-on--dark};
+	--button--primary-border-color--hover: #{colors.$color-primary-50};
+
+	// Primary text color
+	--button--primary-text-color: #{colors.$text-color-emphasized-on--dark};
+	--button--primary-text-color--hover: #{colors.$text-color-emphasized-on--dark};
+	--button--primary-text-color--disabled: #{colors.$text-color-disabled-on--dark};
+
+	// Background color
+	--button--default-background-color: transparent;
+	--button--default-background-color--hover: transparent;
+	--button--default-background-color--disabled: transparent;
+	--button--icon-background-color--active: #{colors.$color-primary-500};
+
+	// Default text color
+	--button--default-text-color: #{colors.$text-color-emphasized-on--dark};
+	--button--default-text-color--hover: #{colors.$text-color-emphasized-on--dark};
+	--button--default-text-color--disabled: #{colors.$text-color-disabled-on--dark};
+
+	// Default border color
+	--button--default-border-color: #{colors.$color-primary};
+	--button--default-border-color--hover: #{colors.$color-primary-600};
+	--button--default-border-color--disabled: #{colors.$color-primary-800};
+
+	// Quiet text color
+	--button--quiet-text-color: #{colors.$text-color-default-on--dark};
+	--button--quiet-text-color--hover: #{colors.$text-color-emphasized-on--dark};
+	--button--quiet-text-color--disabled: #{colors.$text-color-disabled-on--dark};
+
+	// Quiet background color
+	--button--quiet-background-color: transparent;
+	--button--quiet-background-color--hover: #{colors.$color-primary-800};
+	--button--quiet-background-color--disabled: transparent;
+
+	// Icon text color
+	--button--icon-text-color: #{colors.$icon-color-default-on--dark};
+	--button--icon-text-color--hover: #{colors.$icon-color-emphasized-on--dark};
+	--button--icon-text-color--disabled: #{colors.$icon-color-disabled-on--dark};
+
+	// Icon background color
+	--button--icon-background-color--hover: #{colors.$color-primary-800};
+	--button--icon-background-color--focus: #{colors.$color-primary-800};
+	--button--icon-background-color: #{colors.$icon-color-emphasized-on--dark};
+	--button--icon-background-color--disabled: #{colors.$icon-color-disabled-on--dark};
+}
+
+[data-theme="special-edition"] {
+	--button--primary-background-color: #{colors.$x__mas__green--light};
+	--button--primary-background-color--hover: #{colors.$x__mas__green--dark};
+	--button--primary-background-color--disabled: #{colors.$color-primary-800};
+	--button--primary-icon-background-color: #{colors.$color-secondary};
+	--button--primary-icon-background-color--disabled: #{colors.$text-color-disabled-on--dark};
+
+	// Primary text color
+	--button--primary-text-color: #{colors.$text-color-emphasized-on--dark};
+	--button--primary-text-color--hover: #{colors.$text-color-emphasized-on--dark};
+	--button--primary-text-color--disabled: #{colors.$text-color-disabled-on--dark};
+
+	// Background color
+	--button--default-background-color: transparent;
+	--button--default-background-color--hover: transparent;
+	--button--default-background-color--disabled: transparent;
+	--button--icon-background-color--active: #{colors.$color-primary-500};
+
+	// Default text color
+	--button--default-text-color: #{colors.$text-color-emphasized-on--dark};
+	--button--default-text-color--hover: #{colors.$text-color-emphasized-on--dark};
+	--button--default-text-color--disabled: #{colors.$text-color-disabled-on--dark};
+
+	// Default border color
+	--button--default-border-color: #{colors.$x__mas__green--dark};
+	--button--default-border-color--hover: #{colors.$x__mas__green--dark};
+	--button--default-border-color--disabled: #{colors.$x__mas__green--dark};
+
+	// Quiet text color
+	--button--quiet-text-color: #{colors.$text-color-default-on--dark};
+	--button--quiet-text-color--hover: #{colors.$text-color-emphasized-on--dark};
+	--button--quiet-text-color--disabled: #{colors.$text-color-disabled-on--dark};
+
+	// Quiet background color
+	--button--quiet-background-color: transparent;
+	--button--quiet-background-color--hover: #{colors.$color-primary-800};
+	--button--quiet-background-color--disabled: transparent;
+
+	// Icon text color
+	--button--icon-text-color: #{colors.$icon-color-default-on--dark};
+	--button--icon-text-color--hover: #{colors.$icon-color-emphasized-on--dark};
+	--button--icon-text-color--disabled: #{colors.$icon-color-disabled-on--dark};
+
+	// Icon background color
+	--button--icon-background-color--hover: #{colors.$x__mas__green--dark};
+	--button--icon-background-color--focus: #{colors.$x__mas__green--dark};
+	--button--icon-background-color: #{colors.$x__mas__green--light};
+	--button--icon-background-color--disabled: #{colors.$x__mas__green--light};
+}
+
+.btn {
+	font-family: fonts.$font-family;
+	@include typography.font("button");
+	display: inline-block;
+	text-align: center;
+	padding: 6px 12px;
+	white-space: nowrap;
+	line-height: calc(#{map.get(map.get(typography.$font-styles, "button"), "line-height")} - 2px);
+
+	&:hover:not([disabled]):not(.disabled) {
+		cursor: pointer;
+	}
+	&:not(.btn--is-icon) i {
+		background-size: cover;
+		background-clip: text;
+		/* stylelint-disable-next-line property-no-vendor-prefix */
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-color: var(--button--icon-background-color);
+		&.yi-visma {
+			-webkit-text-fill-color: colors.$color-visma;
+		}
+	}
+	&.disabled,
+	&:disabled {
+		cursor: not-allowed;
+		&:not(.btn--is-icon) i {
+			background-color: var(--button--icon-background-color--disabled) !important;
+		}
+	}
+	@include animations.transition();
+	border-radius: $--button-border-radius;
+	&--is-icon-size-32 {
+		font-size: 20px;
+	}
+	&--is-icon-size-24 {
+		font-size: 16px;
+	}
+	&--is-icon-size-20 {
+		font-size: 12px;
+	}
+
+	.btn__icon {
+		vertical-align: middle;
+		margin-bottom: 2px;
+		font-size: 16px;
+		&--is-suffix {
+			margin-left: 8px;
+		}
+		&--is-prefix {
+			margin-right: 8px;
+		}
+	}
+
+	&.btn--is-primary {
+		i {
+			background-color: var(--button--primary-icon-background-color);
+			background-image: url("~@/assets/textures/a-texture-icon-brand-orange.png");
+		}
+		&.btn--is-in-row {
+			i {
+				background-color: var(--button--primary-text-color);
+			}
+		}
+
+		background-color: var(--button--primary-background-color);
+		color: var(--button--primary-text-color);
+		border: $--button-border-width solid transparent;
+		&:hover:not([disabled]):not(.disabled) {
+			box-shadow: shapes.$shape--elevation-low;
+		}
+		&:hover:not([disabled]):not(.disabled),
+		&:focus:not([disabled]):not(.disabled) {
+			background-color: var(--button--primary-background-color--hover);
+		}
+		&.disabled,
+		&:disabled {
+			background-color: var(--button--primary-background-color--disabled);
+			color: var(--button--primary-text-color--disabled);
+			i {
+				background-image: unset;
+				background-color: var(--button--primary-icon-background-color--disabled);
+			}
+		}
+	}
+	&.btn--is-in-row {
+		height: 24px;
+		padding: 2px 6px;
+		.btn__icon {
+			&--is-suffix {
+				margin-left: 4px;
+			}
+			&--is-prefix {
+				margin-right: 4px;
+			}
+		}
+		i {
+			font-size: 13px;
+			background-image: unset;
+		}
+	}
+
+	&.btn--is-default {
+		background-color: var(--button--default-background-color);
+		color: var(--button--default-text-color);
+		border: $--button-border-width solid var(--button--default-border-color);
+		&.disabled,
+		&:disabled {
+			background-color: var(--button--default-background-color--disabled);
+			color: var(--button--default-text-color--disabled);
+			border-color: var(--button--default-border-color--disabled);
+		}
+		&:hover:not([disabled]):not(.disabled),
+		&:focus:not([disabled]):not(.disabled) {
+			border-color: var(--button--default-border-color--hover);
+			box-shadow: shapes.$shape--elevation-low;
+			background-color: var(--button--default-background-color--hover);
+		}
+	}
+
+	&.btn--is-quiet {
+		background-color: transparent;
+		border: none;
+		color: var(--button--quiet-text-color);
+		&.disabled,
+		&:disabled {
+			color: var(--button--quiet-text-color--disabled);
+		}
+		&:hover:not([disabled]):not(.disabled):not(.btn--is-active),
+		&:focus:not([disabled]):not(.disabled):not(.btn--is-active) {
+			background-color: var(--button--quiet-background-color--hover);
+			color: var(--button--quiet-text-color--hover);
+		}
+	}
+
+	&.btn--is-fullwidth {
+		width: 100%;
+		position: relative;
+		max-width: 200px;
+
+		.btn__icon--is-suffix {
+			position: absolute;
+			right: 12px;
+			top: 8px;
+		}
+
+		.btn__icon--is-prefix {
+			position: absolute;
+			left: 12px;
+			top: 8px;
+		}
+	}
+
+	&.btn--is-icon,
+	&.btn--has-date-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4px;
+		background-color: transparent;
+		color: var(--button--icon-text-color);
+		border: none;
+		&.disabled {
+			color: var(--button--icon-text-color--disabled);
+		}
+		&:hover:not([disabled]):not(.disabled) {
+			background-color: var(--button--icon-background-color--hover);
+			color: var(--button--icon-text-color--hover);
+		}
+		&:focus:not([disabled]):not(.disabled):not(.btn--is-active) {
+			background-color: var(--button--icon-background-color--focus);
+			color: var(--button--icon-text-color--hover);
+		}
+	}
+
+	&.btn--is-icon {
+		$iconSizes: (32, 24, 20);
+		margin-bottom: 0;
+		@each $size in $iconSizes {
+			&.btn--is-icon-size-#{$size} {
+				width: #{$size}px;
+				height: #{$size}px;
+				.btn__image {
+					width: #{$size}px;
+					height: #{$size}px;
+				}
+			}
+		}
+	}
+
+	.btn__image {
+		object-fit: contain;
+	}
+
+	&.btn--has-date-icon {
+		position: absolute;
+		top: 4px;
+		left: 121px;
+		width: 24px;
+		height: 24px;
+		&.disabled {
+			pointer-events: none;
+		}
+	}
+
+	&.btn--is-active {
+		color: var(--text-color--emphasized);
+		background-color: var(--button--icon-background-color--active);
+	}
+}

@@ -1,0 +1,91 @@
+// Transition
+@mixin transition($property: all, $time: 0.15s, $ease: ease, $delay: 0s) {
+	transition: $property $time $ease $delay;
+}
+
+// Simple fade-in animation (ideal for display:none changes)
+@mixin fade-in() {
+	animation: fade-in 0.15s ease-in-out;
+}
+
+.fade-in,
+%fade-in {
+	@include fade-in();
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// Fade
+.fade-enter-active,
+.fade-leave-active {
+	transition-property: opacity;
+	transition-duration: 0.25s;
+}
+
+.fade-enter-active {
+	transition-delay: 0.25s;
+}
+
+.fade-enter,
+.fade-leave-active {
+	opacity: 0;
+}
+
+// Collapse
+.collapse-enter-active,
+.collapse-leave-active {
+	transition: width 0.2s ease;
+}
+
+.collapse-enter,
+.collapse-leave-to {
+	width: 0 !important;
+}
+
+// Slide
+.left-enter-active,
+.left-leave-active {
+	transition: 0.2s;
+}
+.left-enter,
+.left-leave-to {
+	transform: translate3d(-100%, 0, 0);
+}
+
+.right-enter-active,
+.right-leave-active {
+	transition: 0.2s;
+}
+.right-enter,
+.right-leave-to {
+	transform: translate3d(100%, 0, 0);
+}
+
+.slide-enter-active {
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.slide-leave-active {
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-enter-to,
+.slide-leave {
+	max-height: 100px;
+	overflow: hidden;
+}
+
+.slide-enter,
+.slide-leave-to {
+	overflow: hidden;
+	max-height: 0;
+}

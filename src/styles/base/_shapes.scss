@@ -1,0 +1,25 @@
+// Generic shape variables
+@use "colors";
+
+$shape-border-width: 1px;
+$shape-border-radius: 2px;
+$shape-border-color: colors.$color-primary-100;
+
+$shape-gutter: 12px;
+
+$shape--elevation-subtle: 0 3px 8px rgb(29 36 38 / 4%);
+$shape--elevation-low: 0 1px 4px 0 #1d242652;
+$shape--elevation-medium: 0 10px 24px rgb(29 36 38 / 12%);
+$shape--elevation-high: 0 24px 56px rgb(29 36 38 / 16%);
+
+$shape--elevation-on-top: 0 -2px 24px rgb(29 36 38 / 8%);
+
+// CSS variables to toggle between Light and Dark mode
+:root,
+[data-theme="light"] {
+	--shape-border-color: #{colors.$color-primary-100};
+}
+
+[data-theme="dark"] {
+	--shape-border-color: #{colors.$color-primary-800};
+}

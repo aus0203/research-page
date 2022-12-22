@@ -1,0 +1,61 @@
+/* stylelint-disable property-no-vendor-prefix
+-- background clip is still needed with webkit prefix */
+
+%texture {
+	background-size: cover;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.yit-brand {
+	background-image: url("~@/assets/textures/a-texture-icon-brand-orange.png");
+	@extend %texture;
+}
+
+.yit-gray--light {
+	background-image: url("~@/assets/textures/a-texture-icon-gray-light.png");
+	@extend %texture;
+}
+
+.yit-gray--dark {
+	background-image: url("~@/assets/textures/a-texture-icon-gray-dark.png");
+	@extend %texture;
+}
+
+.yit-red {
+	background-image: url("~@/assets/textures/a-texture-icon-red.png");
+	@extend %texture;
+}
+
+.yit-red--bright {
+	background-image: url("~@/assets/textures/a-texture-icon-red-bright.png");
+	@extend %texture;
+}
+
+.yit-green {
+	background-image: url("~@/assets/textures/a-texture-icon-green.png");
+	@extend %texture;
+}
+
+.yit-yellow {
+	background-image: url("~@/assets/textures/a-texture-icon-yellow-light.png");
+	@extend %texture;
+}
+
+.yit-blue {
+	background-image: url("~@/assets/textures/a-texture-icon-blue.png");
+	@extend %texture;
+}
+
+.yit-blue--bright {
+	background-image: url("~@/assets/textures/a-texture-icon-blue-bright.png");
+	@extend %texture;
+}
+
+.yit-purple--bright {
+	background-image: url("~@/assets/textures/a-texture-icon-purple-bright.png");
+	@extend %texture;
+}
