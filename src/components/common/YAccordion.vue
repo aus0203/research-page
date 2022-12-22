@@ -21,12 +21,10 @@ let accordionIsOpen = ref(true);
     </div>
     <Transition>
       <div
-        class="paragraph u-pl8 u-pt16"
+        class="paragraph u-pl8 u-pt8"
         :class="{ hidden: accordionIsOpen }"
-        @click="accordionIsOpen = !accordionIsOpen"
-      >
-        {{ prop.question.answer }}
-      </div>
+        v-html="prop.question.answer"
+      ></div>
     </Transition>
     <div class="bottom-line" :class="{ open: !accordionIsOpen }"></div>
   </div>
@@ -35,7 +33,6 @@ let accordionIsOpen = ref(true);
 <style lang="scss" scoped>
 .accordion {
   .control {
-    cursor: pointer;
     .chevron {
       height: 16px;
       &.rotate {
@@ -46,10 +43,10 @@ let accordionIsOpen = ref(true);
       border-radius: 2px;
       background-color: #eeeeee;
       transition: 0.2s ease-in-out;
+      cursor: pointer;
     }
   }
   .paragraph {
-    cursor: pointer;
     max-width: 768px;
     white-space: pre-wrap;
     &.hidden {
@@ -59,7 +56,7 @@ let accordionIsOpen = ref(true);
   .bottom-line {
     border-bottom: 1px solid #d2d2d2;
     &.open {
-      padding-top: 16px;
+      padding-top: 24px;
     }
   }
 }

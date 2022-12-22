@@ -11,9 +11,7 @@ const prop = defineProps(["step", "index"]);
         <div class="headline-2 u-mb16">
           {{ prop.step.title }}
         </div>
-        <div class="paragraph">
-          {{ prop.step.description }}
-        </div>
+        <div class="paragraph" v-html="prop.step.description"></div>
       </div>
       <img
         :class="{ right: prop.index % 2 == 1 }"

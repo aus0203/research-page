@@ -109,7 +109,7 @@ onBeforeUnmount(() => [
 }
 
 .section-steps {
-  gap: 56px;
+  gap: 32px;
   .steps-title {
     text-align: center;
     width: calc(100% - 64px);
