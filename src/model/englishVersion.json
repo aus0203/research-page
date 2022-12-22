@@ -12,21 +12,21 @@
       "order": "Step 1",
       "title": "Sign up",
       "description": "Tell us a little bit about yourself by filling a from. It’ll help us determine if any of the upcoming UX research studies would be a good match.",
-      "src": "src/assets/image/y-image-sign-up.png"
+      "src": "assets/image/y-image-sign-up.png"
     },
     {
       "id": 1,
       "order": "Step 2",
       "title": "Get contacted and join the research",
       "description": "If a study is a good fit for you, you’ll get a follow-up questionnaire and details about what the study involves, including next steps and location..",
-      "src": "src/assets/image/y-image-session.png"
+      "src": "assets/image/y-image-session.png"
     },
     {
       "id": 2,
       "order": "Step 3",
       "title": "Accept our gift",
       "description": "After completing the study, most participants will get a giftcard to thank them for their time.",
-      "src": "src/assets/image/y-image-gift.png"
+      "src": "assets/image/y-image-gift.png"
     }
   ],
   "questionSectionTitle":"Research Q&A",
