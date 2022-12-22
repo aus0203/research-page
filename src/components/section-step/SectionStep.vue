@@ -15,7 +15,6 @@ const prop = defineProps(["step", "index"]);
           {{ prop.step.description }}
         </div>
       </div>
-
       <img
         :class="{ right: prop.index % 2 == 1 }"
         class="step-image"
