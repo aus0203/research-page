@@ -21,7 +21,7 @@ let accordionIsOpen = ref(true);
     </div>
     <Transition>
       <div
-        class="paragraph u-pl8 u-pt8"
+        class="paragraph u-pl8 u-pt12"
         :class="{ hidden: accordionIsOpen }"
         v-html="prop.question.answer"
       ></div>
