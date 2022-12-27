@@ -1,6 +1,6 @@
 {
   "heroline": {
-    "headline": "Flemish Help shape the future of Yuki",
+    "headline": "FLemish Help shape the future of Yuki",
     "subtitle": "Join the Yuki user research group",
     "description": "We’d love to know your thoughts, so we can keep making Yuki that fit your needs. You’ll get to influence things millions of people use every day, from email and productivity apps to tools for developers and educators"
   },
@@ -11,7 +11,7 @@
       "id": 0,
       "order": "Step 1",
       "title": "Sign up",
-      "description": "Tell us a little bit about yourself by filling a from. It’ll help us determine if any of the upcoming UX research studies would be a good match.",
+      "description": "Tell us a little bit about yourself by <a src='#' class='link'>filling a form</a>. It’ll help us determine if any of the upcoming UX research studies would be a good match.",
       "src": "assets/image/y-image-sign-up.png"
     },
     {
@@ -53,7 +53,7 @@
         {
           "id": 4,
           "title": "I signed up, but I’ve decided that I don’t want to participate. How do I opt out?",
-          "answer": "You can opt out at any time by completing the opt-out form."
+          "answer": "You can opt out at any time by completing the <a src='#' class='link'>opt out form</a>."
         }
       ]
     },
@@ -63,8 +63,8 @@
       "questions": [
         {
           "id": 1,
-          "title": "What exactly will i be doing in these studies?",
-          "answer": "Yuki runs a variety of study types. You may be invited to participate in any of the following studies:\n\nRemote usability study\n\nIn these studies, we’ll gather your feedback via a screen-sharing session with a researcher where you may be asked questions or provide feedback about a process or design. You can be almost anywhere in the world, but you’ll need to have a high-speed Internet connection.\n\nGiving feedback at a Yuki office\n\nThis works best for people who live close to one of our offices. Typically, you’ll meet one-on-one with a UX Researcher who’ll ask you some questions about your experiences with our products or technology in general.You can reply directly to your invitation with any questions.\n\nSurveys\n\nFor these studies, we’ll simply send you a survey form to fill in. Please note that we don’t typically offer a gift for participating in a survey."
+          "title": "What exactly will I be doing in these studies?",
+          "answer": "Yuki runs a variety of study types. You may be invited to participate in any of the following studies:<br><br><div class='headline-3'>Remote usability study</div><br>In these studies, we’ll gather your feedback via a screen-sharing session with a researcher where you may be asked questions or provide feedback about a process or design. You can be almost anywhere in the world, but you’ll need to have a high-speed Internet connection.<br> <div class='headline-3'>Giving feedback at a Yuki office</div><br>This works best for people who live close to one of our offices. Typically, you’ll meet one-on-one with a UX Researcher who’ll ask you some questions about your experiences with our products or technology in general.You can reply directly to your invitation with any questions.<br> <div class='headline-3'>Surveys</div> <br>For these studies, we’ll simply send you a survey form to fill in. Please note that we don’t typically offer a gift for participating in a survey."
         }
       ]
     },
@@ -86,8 +86,8 @@
     }
   ],
   "promotion": {
-    "title": "When will I recieve a gift?",
-    "description": "If your session is eligible for a thank you gift, you should receive it three to five working days after completing your session. Please note that not all study participants will receive a thank you gift."
+    "title": "Build the better Yuki together",
+    "description": "Your feedback will make it possible for us to continue our mission of building a more helpful Yuki for everyone – no matter who they are, where they live, or what they want to accomplish."
   },
   "languages": [
     { "id": 1, "option": "English" },
