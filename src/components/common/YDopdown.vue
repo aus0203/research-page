@@ -42,13 +42,23 @@ onBeforeUnmount(() => {
     <div class="button">
       {{ selectedLanguage }}
     </div>
-    <img class="icon" src="../../assets/icons/a-icon-chevron-down.png" alt="" />
+    <img
+      class="icon"
+      src="../../assets/icons/a-icon-chevron-down.png"
+      alt="chveron"
+    />
     <transition name="fade" appear>
       <div
         class="popOver u-px8 u-py8"
         v-if="dropDownIsOpen"
         :class="{ 'popOver--is-onbottom': dropDownIsOpen }"
       >
+        <img
+          class="icon"
+          src="../../assets/icons/a-icon-cross.png"
+          alt="cross"
+          @click.stop="dropDownIsOpen = !dropDownIsOpen"
+        />
         <YDropdownItem
           v-for="language in languages"
           :key="language.id"
@@ -93,6 +103,13 @@ onBeforeUnmount(() => {
   border-radius: 2px;
   box-shadow: 0px 24px 56px rgba(29, 36, 38, 0.16);
 
+  .icon {
+    width: 20px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    display: none;
+  }
+
   &.popOver--is-onbottom {
     position: absolute;
     z-index: 1;
@@ -106,10 +123,13 @@ onBeforeUnmount(() => {
     position: inherit;
   }
   .popOver {
+    .icon {
+      display: block;
+    }
     &.popOver--is-onbottom {
       width: 50vw;
       height: 100vh;
-      padding: 40px 12px;
+      padding: 20px 12px;
       top: 0;
     }
   }
