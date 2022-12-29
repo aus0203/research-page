@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import YButton from "../common/YButton.vue";
-import YDropdown from "../common/YDopdown.vue";
+import YDropdown from "../common/YDropdown.vue";
 const prop = defineProps(["languages", "action"]);
 
 const showTransition = ref(false);
