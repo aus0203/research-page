@@ -23,7 +23,7 @@ function onLanguageUpdate() {
     <div class="content flex jc-sb ai-c">
       <div class="flex flex-2 ai-c">
         <slot name="logo"></slot>
-        <div class="u-pl12 headline-3">Yuki User Research Group</div>
+        <div class="u-pl12 headline-3">Yuki User Experience Research</div>
       </div>
       <div class="right flex flex-r ai-c">
         <YDropdown
