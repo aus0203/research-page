@@ -4,26 +4,26 @@
     "subtitle": "Join the Yuki user research group",
     "description": "We’d love to know your thoughts, so we can keep making Yuki that fit your needs. You’ll get to influence things millions of people use every day, from email and productivity apps to tools for developers and educators"
   },
-  "action": "Sign up",
-  "stepSectionTitle": "How to participate?",
+  "action": "Aanmelden",
+  "stepSectionTitle": "Hoe deelnemen?",
   "steps": [
     {
       "id": 0,
-      "order": "Step 1",
-      "title": "Sign up",
-      "description": "Tell us a little bit about yourself by <a src='#' class='link'>filling a form</a>. It’ll help us determine if any of the upcoming UX research studies would be a good match.",
+      "order": "Stap 1",
+      "title": "Aanmelden",
+      "description": "Vertel ons iets over jezelf door ons <a src='#' class='link'>formulier in te vullen</a>. Het zal ons helpen bepalen of een van de komende UX-onderzoeken een goede match zou zijn.",
       "src": "assets/image/y-image-sign-up.png"
     },
     {
       "id": 1,
-      "order": "Step 2",
+      "order": "Stap 2",
       "title": "Get contacted and join the research",
       "description": "If a study is a good fit for you, you’ll get a follow-up questionnaire and details about what the study involves, including next steps and location..",
       "src": "assets/image/y-image-session.png"
     },
     {
       "id": 2,
-      "order": "Step 3",
+      "order": "Stap 3",
       "title": "Accept our gift",
       "description": "After completing the study, most participants will get a giftcard to thank them for their time.",
       "src": "assets/image/y-image-gift.png"

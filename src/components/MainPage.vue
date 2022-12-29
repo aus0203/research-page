@@ -8,6 +8,7 @@ import YAccordion from "@/components/common/YAccordion.vue";
 import PageFooter from "../components/pagefooter/PageFooter.vue";
 import { useDataStore } from "../store/dataStore";
 
+/*Store*/
 const dataStore = useDataStore();
 
 /**Scroll effect**/

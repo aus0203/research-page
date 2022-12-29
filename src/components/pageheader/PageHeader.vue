@@ -1,9 +1,21 @@
 <script setup>
+import { ref } from "vue";
 import YButton from "../common/YButton.vue";
 import YDropdown from "../common/YDopdown.vue";
 const prop = defineProps(["languages", "action"]);
+
+const showTransition = ref(false);
+function onClick() {
+  showTransition.value = true;
+}
+function onLanguageUpdate() {
+  showTransition.value = false;
+}
 </script>
 <template>
+  <Transition v-if="showTransition">
+    <span class="progress-line"></span>
+  </Transition>
   <div class="header flex jc-c u-pt32 u-px32 u-pb12">
     <div class="content flex jc-sb ai-c">
       <div class="flex flex-2 ai-c">
@@ -11,7 +23,11 @@ const prop = defineProps(["languages", "action"]);
         <div class="u-pl12 headline-3">Yuki User Research Group</div>
       </div>
       <div class="right flex flex-r ai-c">
-        <YDropdown :languages="prop.languages" />
+        <YDropdown
+          @click="onClick()"
+          @languageUpdate="onLanguageUpdate()"
+          :languages="prop.languages"
+        />
         <YButton class="btn" :action="prop.action" />
       </div>
     </div>

@@ -21,7 +21,7 @@
 	overflow: hidden;
 
 	&::before {
-		background: url("~@/assets/loadingbar.jpg");
+		background: url("@/assets/loadingbar.jpg");
 		background-color: colors.$color-secondary-900;
 		background-position: center 0;
 		background-size: contain;

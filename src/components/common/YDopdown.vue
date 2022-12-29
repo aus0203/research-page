@@ -3,6 +3,8 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 import { useDataStore } from "../../store/dataStore";
 import YDropdownItem from "./YDropdown-item.vue";
 const prop = defineProps(["languages"]);
+const emit = defineEmits(["click", "languageUpdate"]);
+
 /**Dropdown behaviour**/
 /**Open/Hide menu**/
 let dropDownIsOpen = ref(false);
@@ -24,7 +26,13 @@ onMounted(() => {
 });
 
 function onClick(language) {
-  dataStore.set(language.id);
+  emit("click");
+  /**loading time**/
+  setTimeout(() => {
+    dataStore.set(language.id);
+    emit("languageUpdate");
+  }, 1200);
+
   selectedLanguage.value = language.option;
 }
 
