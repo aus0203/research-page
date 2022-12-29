@@ -39,6 +39,7 @@ onBeforeUnmount(() => [
       />
     </template>
   </PageHeader>
+  <!--Main content-->
   <div ref="content" class="main_content flex flex-c">
     <!--Hero line-->
     <HeroLine

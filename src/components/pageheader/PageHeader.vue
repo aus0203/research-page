@@ -13,10 +13,13 @@ function onLanguageUpdate() {
 }
 </script>
 <template>
-  <Transition v-if="showTransition">
-    <span class="progress-line"></span>
-  </Transition>
   <div class="header flex jc-c u-pt32 u-px32 u-pb12">
+    <Transition>
+      <span
+        v-if="showTransition"
+        class="progress-line progress-line__full-screen"
+      ></span>
+    </Transition>
     <div class="content flex jc-sb ai-c">
       <div class="flex flex-2 ai-c">
         <slot name="logo"></slot>
